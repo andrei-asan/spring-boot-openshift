@@ -7,6 +7,7 @@ pipeline {
             steps {
                 git branch: 'master', url: 'https://github.com/fkunnen/spring-boot-openshift.git'
                 script {
+                    sh "echo testtest"
                     version = sh(returnStdout: true, script: "git rev-list HEAD --count").trim()
                     sh "./gradlew clean build"
                 }
