@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Build App') {
             steps {
-                git branch: 'master', url: 'https://github.com/andrei-asan/spring-boot-openshift.git'
+                git branch: 'testing_inception', url: 'https://github.com/andrei-asan/spring-boot-openshift.git'
                 script {
                     sh "echo testtest"
                     version = sh(returnStdout: true, script: "git rev-list HEAD --count").trim()
